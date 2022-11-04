@@ -1,0 +1,17 @@
+"D:\IAR\arm\bin\armPROC.dll" 
+
+"D:\IAR\arm\bin\armJLINK.dll" 
+
+"E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Exe\NewProject.out" 
+
+--plugin="D:\IAR\arm\bin\armbat.dll" 
+
+--device_macro="D:\IAR\arm/config/debugger/NXP/Kxx.dmac" 
+
+--device_macro="D:\IAR\arm/config/debugger/NXP/Kxx_Trace.dmac" 
+
+--flash_loader="D:\IAR\arm/config/flashloader/NXP/FlashK60Dxxx128K.board" 
+
+
+
+

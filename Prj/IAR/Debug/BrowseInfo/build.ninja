@@ -1,0 +1,71 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = D$:\IAR\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++D$:\IAR\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = D$:\IAR\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++D$:\IAR\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = D$:\IAR\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++D$:\IAR\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = D$:\IAR\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++D$:\IAR\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Code\FREESCALE\NewProject\App\src\main.c -xcl_file E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.xcl -macro_file E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.tmp -icc_path D$:\IAR\arm\bin\iccarm.exe
+  flags = E$:\Code\FREESCALE\NewProject\App\src\main.c -o E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\App\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\Code\FREESCALE\NewProject\App\inc\ -I E$:\Code\FREESCALE\NewProject\App\src\ -I E$:\Code\FREESCALE\NewProject\Board\inc\ -I E$:\Code\FREESCALE\NewProject\Board\src\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\IAR\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\kinetis\ -I E$:\Code\FREESCALE\NewProject\Chip\src\ -I E$:\Code\FREESCALE\NewProject\Chip\src\IAR\ -I E$:\Code\FREESCALE\NewProject\Lib\CMSIS\inc\ -Ol --predef_macros E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.tmp
+  rspfile_name = E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.xcl.rsp
+
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Code\FREESCALE\NewProject\Chip\src\IAR\system_MK60DZ10.c -xcl_file E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.xcl -macro_file E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.tmp -icc_path D$:\IAR\arm\bin\iccarm.exe
+  flags = E$:\Code\FREESCALE\NewProject\Chip\src\IAR\system_MK60DZ10.c -o E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src\IAR --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\Code\FREESCALE\NewProject\App\inc\ -I E$:\Code\FREESCALE\NewProject\App\src\ -I E$:\Code\FREESCALE\NewProject\Board\inc\ -I E$:\Code\FREESCALE\NewProject\Board\src\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\IAR\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\kinetis\ -I E$:\Code\FREESCALE\NewProject\Chip\src\ -I E$:\Code\FREESCALE\NewProject\Chip\src\IAR\ -I E$:\Code\FREESCALE\NewProject\Lib\CMSIS\inc\ -Ol --predef_macros E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.tmp
+  rspfile_name = E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.xcl.rsp
+
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Code\FREESCALE\NewProject\Chip\src\misc.c -xcl_file E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.xcl -macro_file E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.tmp -icc_path D$:\IAR\arm\bin\iccarm.exe
+  flags = E$:\Code\FREESCALE\NewProject\Chip\src\misc.c -o E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\Code\FREESCALE\NewProject\App\inc\ -I E$:\Code\FREESCALE\NewProject\App\src\ -I E$:\Code\FREESCALE\NewProject\Board\inc\ -I E$:\Code\FREESCALE\NewProject\Board\src\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\IAR\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\kinetis\ -I E$:\Code\FREESCALE\NewProject\Chip\src\ -I E$:\Code\FREESCALE\NewProject\Chip\src\IAR\ -I E$:\Code\FREESCALE\NewProject\Lib\CMSIS\inc\ -Ol --predef_macros E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.tmp
+  rspfile_name = E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.xcl.rsp
+
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Code\FREESCALE\NewProject\Chip\src\vectors.c -xcl_file E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.xcl -macro_file E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.tmp -icc_path D$:\IAR\arm\bin\iccarm.exe
+  flags = E$:\Code\FREESCALE\NewProject\Chip\src\vectors.c -o E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\Code\FREESCALE\NewProject\App\inc\ -I E$:\Code\FREESCALE\NewProject\App\src\ -I E$:\Code\FREESCALE\NewProject\Board\inc\ -I E$:\Code\FREESCALE\NewProject\Board\src\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\IAR\ -I E$:\Code\FREESCALE\NewProject\Chip\inc\kinetis\ -I E$:\Code\FREESCALE\NewProject\Chip\src\ -I E$:\Code\FREESCALE\NewProject\Chip\src\IAR\ -I E$:\Code\FREESCALE\NewProject\Lib\CMSIS\inc\ -Ol --predef_macros E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.tmp
+  rspfile_name = E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.xcl.rsp
+
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.pbi : INDEXER E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.xcl |  $
+E$:\Code\FREESCALE\NewProject\App\src\main.c
+  flags = -out=E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.pbi -f E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.xcl
+
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.pbi : INDEXER E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.xcl |  $
+E$:\Code\FREESCALE\NewProject\Chip\src\IAR\system_MK60DZ10.c
+  flags = -out=E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.pbi -f E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.xcl
+
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.pbi : INDEXER E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.xcl |  $
+E$:\Code\FREESCALE\NewProject\Chip\src\misc.c
+  flags = -out=E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.pbi -f E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.xcl
+
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.pbi : INDEXER E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.xcl |  $
+E$:\Code\FREESCALE\NewProject\Chip\src\vectors.c
+  flags = -out=E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.pbi -f E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.xcl
+
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\NewProject.pbw : MAKEBROWSE E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\NewProject.pbd
+  flags = E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\NewProject.pbd -output E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\NewProject.pbw
+
+build E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\NewProject.pbd : PDBLINK E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.pbi |  $
+E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.pbi $
+E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.pbi $
+E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.pbi
+  flags = -M E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\NewProject.pbd E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\App\src\main.pbi E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.pbi E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\misc.pbi E$:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\vectors.pbi
+
