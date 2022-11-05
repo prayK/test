@@ -70,3 +70,10 @@
 11	852	6892720818862909	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/Chip/src/IAR/startup_MK60DZ10.o	4fccd261b11f2c2a
 37	942	6892720819693029	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/Chip/src/IAR/system_MK60DZ10.o	d45a7118775460bf
 949	1056	6892720820862885	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Exe/NewProject.out	9cf6cd49de14ae4d
+54	954	6893264673229706	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/Chip/src/IAR/system_MK60DZ10.o	495795374f73a042
+14	1042	6893264674109721	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/App/src/main.o	ed844938fc385fc
+129	1173	6893264675390646	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/Chip/src/misc.o	6ef140bd908f5c12
+182	1187	6893264675559742	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/Chip/src/vectors.o	13489abb738c4348
+1195	1342	6893264677220543	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Exe/NewProject.out	9cf6cd49de14ae4d
+10	277	6893265537342265	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/App/src/main.o	ed844938fc385fc
+283	430	6893265538892166	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Exe/NewProject.out	9cf6cd49de14ae4d

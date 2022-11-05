@@ -1,16 +1,16 @@
 E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\BrowseInfo\Chip\src\IAR\system_MK60DZ10.pbi: \
   E:\Code\FREESCALE\NewProject\Chip\src\IAR\system_MK60DZ10.c \
-  E:\Code\FREESCALE\NewProject\Chip\inc\misc.h \
-  E:\Code\FREESCALE\NewProject\Chip\inc\common.h \
+  E:\Code\FREESCALE\NewProject\Prj\IAR\..\..\Chip\inc\misc.h \
+  E:\Code\FREESCALE\NewProject\Prj\IAR\..\..\Chip\inc\common.h \
   D:\IAR\arm\inc\c\stdio.h D:\IAR\arm\inc\c\ycheck.h \
   D:\IAR\arm\inc\c\yvals.h D:\IAR\arm\inc\c\DLib_Defaults.h \
   D:\IAR\arm\inc\c\DLib_Config_Full.h D:\IAR\arm\inc\c\DLib_Product.h \
   D:\IAR\arm\inc\c\ysizet.h D:\IAR\arm\inc\c\string.h \
   D:\IAR\arm\inc\c\DLib_Product_string.h D:\IAR\arm\inc\c\stdlib.h \
   D:\IAR\arm\inc\c\DLib_Product_stdlib.h \
-  E:\Code\FREESCALE\NewProject\Chip\inc\kinetis\MK60DZ10.h \
+  E:\Code\FREESCALE\NewProject\Prj\IAR\..\..\Chip\inc\kinetis\MK60DZ10.h \
   D:\IAR\arm\inc\c\stdint.h D:\IAR\arm\inc\c\aarch32\intrinsics.h \
   D:\IAR\arm\inc\c\aarch32\iccarm_builtin.h \
   D:\IAR\arm\inc\c\aarch32\iar_intrinsics_common.h \
-  E:\Code\FREESCALE\NewProject\Chip\inc\common.h \
-  E:\Code\FREESCALE\NewProject\Chip\inc\IAR\system_MK60DZ10.h
+  E:\Code\FREESCALE\NewProject\Prj\IAR\..\..\Chip\inc\common.h \
+  E:\Code\FREESCALE\NewProject\Prj\IAR\..\..\Chip\inc\IAR\system_MK60DZ10.h

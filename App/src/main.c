@@ -15,3 +15,4 @@ void main(void)
         GPIO_PDOR_REG(PTA_BASE_PTR) &= ~0X01U << 17U;
     }
 }
+

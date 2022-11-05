@@ -343,16 +343,16 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>E:\Code\FREESCALE\NewProject\App\inc</state>
-                    <state>E:\Code\FREESCALE\NewProject\App\src</state>
-                    <state>E:\Code\FREESCALE\NewProject\Board\inc</state>
-                    <state>E:\Code\FREESCALE\NewProject\Board\src</state>
-                    <state>E:\Code\FREESCALE\NewProject\Chip\inc</state>
-                    <state>E:\Code\FREESCALE\NewProject\Chip\inc\IAR</state>
-                    <state>E:\Code\FREESCALE\NewProject\Chip\inc\kinetis</state>
-                    <state>E:\Code\FREESCALE\NewProject\Chip\src</state>
-                    <state>E:\Code\FREESCALE\NewProject\Chip\src\IAR</state>
-                    <state>E:\Code\FREESCALE\NewProject\Lib\CMSIS\inc</state>
+                    <state>$PROJ_DIR$\..\..\App\inc</state>
+                    <state>$PROJ_DIR$\..\..\App\src</state>
+                    <state>$PROJ_DIR$\..\..\Board\inc</state>
+                    <state>$PROJ_DIR$\..\..\Board\src</state>
+                    <state>$PROJ_DIR$\..\..\Chip\inc</state>
+                    <state>$PROJ_DIR$\..\..\Chip\inc\IAR</state>
+                    <state>$PROJ_DIR$\..\..\Chip\inc\kinetis</state>
+                    <state>$PROJ_DIR$\..\..\Chip\src</state>
+                    <state>$PROJ_DIR$\..\..\Chip\src\IAR</state>
+                    <state>$PROJ_DIR$\..\..\Lib\CMSIS\inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -765,7 +765,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>E:\Code\FREESCALE\NewProject\Prj\IAR\ConfigFiles\vcan_ROM_K60N512.icf</state>
+                    <state>$PROJ_DIR$\ConfigFiles\vcan_ROM_K60N512.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
