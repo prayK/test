@@ -22,7 +22,7 @@ static void wdogDisable(void)
     }
     
     /* //WDOGEN清0，禁用看门狗 */
-    WDOG_STCTRLH &= ~WDOG_STCTRLH_WDOGEN_MASK;  
+    WDOG_STCTRLH &= ~WDOG_STCTRLH_WDOGEN_MASK;
 }
 
 /* 复制中断向量表和必要的数据到 RAM 里 */
@@ -77,7 +77,7 @@ static void commonStartup(void)
     while(n--)
         *bss_start++ = 0;
 
-    /* 赋值用 __ramfunc 声明的函数的的代码段到 RAM，可以加快代码的运行        */
+    /* 赋值用 __ramfunc 声明的函数的的代码段到 RAM，可以加快代码的运行 */
     uint8 *code_relocate_ram = __section_begin("CodeRelocateRam");
     uint8 *code_relocate = __section_begin("CodeRelocate");
     uint8 *code_relocate_end = __section_end("CodeRelocate");
@@ -90,7 +90,7 @@ static void commonStartup(void)
 
 void start(void)
 {
-    wdogDisable();
+    //wdogDisable();
     commonStartup();    // 复制中断向量表 和 必要的数据到 RAM里
     main();             // 执行用户主函数
     while(1);          // 死循环

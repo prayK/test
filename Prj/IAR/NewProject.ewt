@@ -2873,9 +2873,6 @@
             <group>
                 <name>IAR</name>
                 <file>
-                    <name>$PROJ_DIR$\..\..\Chip\inc\IAR\iar.h</name>
-                </file>
-                <file>
                     <name>$PROJ_DIR$\..\..\Chip\inc\IAR\system_MK60DZ10.h</name>
                 </file>
             </group>

@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\IAR\common\bin\cspybat" -f "E:\Code\FREESCALE\NewProject\Prj\IAR\settings\NewProject.Debug.general.xcl" --backend -f "E:\Code\FREESCALE\NewProject\Prj\IAR\settings\NewProject.Debug.driver.xcl" 
+& "D:\IAR\common\bin\cspybat" -f "E:\Code\MCU\KinetisNewProject\Prj\IAR\settings\NewProject.Debug.general.xcl" --backend -f "E:\Code\MCU\KinetisNewProject\Prj\IAR\settings\NewProject.Debug.driver.xcl" 
 }
 else
 {
-& "D:\IAR\common\bin\cspybat" -f "E:\Code\FREESCALE\NewProject\Prj\IAR\settings\NewProject.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\Code\FREESCALE\NewProject\Prj\IAR\settings\NewProject.Debug.driver.xcl" 
+& "D:\IAR\common\bin\cspybat" -f "E:\Code\MCU\KinetisNewProject\Prj\IAR\settings\NewProject.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\Code\MCU\KinetisNewProject\Prj\IAR\settings\NewProject.Debug.driver.xcl" 
 }

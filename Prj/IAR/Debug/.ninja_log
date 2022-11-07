@@ -77,3 +77,15 @@
 1195	1342	6893264677220543	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Exe/NewProject.out	9cf6cd49de14ae4d
 10	277	6893265537342265	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/App/src/main.o	ed844938fc385fc
 283	430	6893265538892166	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Exe/NewProject.out	9cf6cd49de14ae4d
+6	271	6893308399450172	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/Chip/src/IAR/system_MK60DZ10.o	495795374f73a042
+288	417	6893308400969980	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Exe/NewProject.out	9cf6cd49de14ae4d
+1	306	6893311884236732	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Obj/Chip/src/IAR/system_MK60DZ10.o	495795374f73a042
+314	424	6893311885483067	E:/Code/FREESCALE/NewProject/Prj/IAR/Debug/Exe/NewProject.out	9cf6cd49de14ae4d
+0	850	6894221546478310	E:/Code/MCU/KinetisNewProject/Prj/IAR/Debug/Obj/Chip/src/IAR/startup_MK60DZ10.o	9257917aec6a39f9
+91	974	6894221547631309	E:/Code/MCU/KinetisNewProject/Prj/IAR/Debug/Obj/Chip/src/vectors.o	904322c082b792e3
+45	992	6894221547816416	E:/Code/MCU/KinetisNewProject/Prj/IAR/Debug/Obj/Chip/src/IAR/system_MK60DZ10.o	a3976c4880c66ebf
+68	1010	6894221547996420	E:/Code/MCU/KinetisNewProject/Prj/IAR/Debug/Obj/Chip/src/misc.o	d229a9cf10bce0f0
+21	1036	6894221548266619	E:/Code/MCU/KinetisNewProject/Prj/IAR/Debug/Obj/App/src/main.o	ff5123d41b6d13d7
+1043	2006	6894221558013310	E:/Code/MCU/KinetisNewProject/Prj/IAR/Debug/Exe/NewProject.out	c29b9f087248ce1b
+1	216	6894335004043671	E:/Code/MCU/KinetisNewProject/Prj/IAR/Debug/Obj/Chip/src/IAR/system_MK60DZ10.o	a3976c4880c66ebf
+223	305	6894335004994396	E:/Code/MCU/KinetisNewProject/Prj/IAR/Debug/Exe/NewProject.out	c29b9f087248ce1b

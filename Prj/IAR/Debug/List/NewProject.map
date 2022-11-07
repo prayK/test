@@ -1,24 +1,24 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.30.1.335/W64 for ARM                  05/Nov/2022  12:42:33
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  06/Nov/2022  18:25:00
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =
-#        E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Exe\NewProject.out
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Exe\NewProject.out
 #    Map file     =
-#        E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\List\NewProject.map
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\List\NewProject.map
 #    Command line =
-#        -f E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Exe\NewProject.out.rsp
-#        (E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\App\src\main.o
-#        E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src\misc.o
-#        E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src\IAR\startup_MK60DZ10.o
-#        E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src\IAR\system_MK60DZ10.o
-#        E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src\vectors.o
+#        -f E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Exe\NewProject.out.rsp
+#        (E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\App\src\main.o
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\Chip\src\misc.o
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\Chip\src\IAR\startup_MK60DZ10.o
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\Chip\src\IAR\system_MK60DZ10.o
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\Chip\src\vectors.o
 #        --no_out_extension -o
-#        E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Exe\NewProject.out --map
-#        E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\List\NewProject.map
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Exe\NewProject.out --map
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\List\NewProject.map
 #        --config
-#        E:\Code\FREESCALE\NewProject\Prj\IAR\ConfigFiles\vcan_ROM_K60N512.icf
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\ConfigFiles\vcan_ROM_K60N512.icf
 #        --semihosting --entry __iar_program_start --vfe --text_out locale
 #        --cpu=Cortex-M4 --fpu=None)
 #
@@ -74,25 +74,25 @@ No sections matched the following patterns:
   .noinit          ro code        0x410    0x8  startup_MK60DZ10.o [3]
                                 - 0x418    0x8
 
-"P1", part 1 of 2:                       0x214
-  .text            ro code        0x418   0xd8  system_MK60DZ10.o [3]
-  .text            ro code        0x4f0   0x28  misc.o [2]
-  .text            ro code        0x518   0x40  main.o [1]
-  .text            ro code        0x558   0x24  ABIassert.o [6]
-  .text            ro code        0x57c    0x6  abort.o [4]
-  .text            ro code        0x582    0x2  vectors.o [2]
-  .text            ro code        0x584   0x14  exit.o [6]
-  .rodata          const          0x598   0x30  misc.o [2]
-  .text            ro code        0x5c8   0x1e  cmain.o [5]
-  .text            ro code        0x5e6    0x4  low_level_init.o [4]
-  .text            ro code        0x5ea    0x4  exit.o [4]
-  .text            ro code        0x5f0    0xa  cexit.o [5]
-  .text            ro code        0x5fc   0x1c  cstartup_M.o [5]
-  .rodata          const          0x618   0x14  misc.o [2]
-                                - 0x62c  0x214
+"P1", part 1 of 2:                       0x1dc
+  .text            ro code        0x418   0xa0  system_MK60DZ10.o [3]
+  .text            ro code        0x4b8   0x28  misc.o [2]
+  .text            ro code        0x4e0   0x40  main.o [1]
+  .text            ro code        0x520   0x24  ABIassert.o [6]
+  .text            ro code        0x544    0x6  abort.o [4]
+  .text            ro code        0x54a    0x2  vectors.o [2]
+  .text            ro code        0x54c   0x14  exit.o [6]
+  .rodata          const          0x560   0x30  misc.o [2]
+  .text            ro code        0x590   0x1e  cmain.o [5]
+  .text            ro code        0x5ae    0x4  low_level_init.o [4]
+  .text            ro code        0x5b2    0x4  exit.o [4]
+  .text            ro code        0x5b8    0xa  cexit.o [5]
+  .text            ro code        0x5c4   0x1c  cstartup_M.o [5]
+  .rodata          const          0x5e0   0x14  misc.o [2]
+                                - 0x5f4  0x1dc
 
 "P1", part 2 of 2:                         0x0
-  CodeRelocate                    0x62c    0x0  <Block>
+  CodeRelocate                    0x5f4    0x0  <Block>
 
 "P2":                                      0x0
   CodeRelocateRam           0x1fff'0410    0x0  <Block>
@@ -101,7 +101,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-        0x62c     0x8'0000  0x7'f9d5
+        0x5f4     0x8'0000  0x7'fa0d
   0x1fff'0410  0x2001'0000  0x1'fbf1
 
 
@@ -116,22 +116,22 @@ command line/config:
     ------------------------------------
     Total:
 
-E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\App\src: [1]
+E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\App\src: [1]
     main.o                   64
     ------------------------------------
     Total:                   64
 
-E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src: [2]
+E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\Chip\src: [2]
     misc.o                   40       68
     vectors.o                 2    1'040
     ------------------------------------
     Total:                   42    1'108
 
-E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src\IAR: [3]
+E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\Chip\src\IAR: [3]
     startup_MK60DZ10.o        8
-    system_MK60DZ10.o       216
+    system_MK60DZ10.o       160
     ------------------------------------
-    Total:                  224
+    Total:                  168
 
 dl7M_tlf.a: [4]
     abort.o                   6
@@ -155,7 +155,7 @@ shb_l.a: [6]
 
     Gaps                      4
 ----------------------------------------
-    Grand Total:            472    1'108
+    Grand Total:            416    1'108
 
 
 *******************************************************************************
@@ -169,9 +169,9 @@ Entry                       Address   Size  Type      Object
 .data$$Base                     0x0          --   Gb  - Linker created -
 .data_init$$Base                0x0          --   Gb  - Linker created -
 .data_init$$Limit               0x0          --   Gb  - Linker created -
-?main                         0x5c9         Code  Gb  cmain.o [5]
-CodeRelocate$$Base            0x62c          --   Gb  - Linker created -
-CodeRelocate$$Limit           0x62c          --   Gb  - Linker created -
+?main                         0x591         Code  Gb  cmain.o [5]
+CodeRelocate$$Base            0x5f4          --   Gb  - Linker created -
+CodeRelocate$$Limit           0x5f4          --   Gb  - Linker created -
 CodeRelocateRam$$Base   0x1fff'0410          --   Gb  - Linker created -
 CodeRelocateRam$$Limit  0x1fff'0410          --   Gb  - Linker created -
 Region$$Table$$Base             0x0          --   Gb  - Linker created -
@@ -181,34 +181,33 @@ __BOOT_STACK_ADDRESS {Abs}
                         0x2000'fff8         Data  Gb  <internal module>
 __VECTOR_RAM {Abs}      0x1fff'0000         Data  Gb  <internal module>
 __VECTOR_TABLE {Abs}            0x0         Data  Gb  <internal module>
-__aeabi_assert                0x559   0x24  Code  Gb  ABIassert.o [6]
-__cmain                       0x5c9         Code  Gb  cmain.o [5]
+__aeabi_assert                0x521   0x24  Code  Gb  ABIassert.o [6]
+__cmain                       0x591         Code  Gb  cmain.o [5]
 __code_start__ {Abs}          0x410         Data  Gb  <internal module>
-__exit                        0x585   0x14  Code  Gb  exit.o [6]
-__iar_program_start           0x5fd         Code  Gb  cstartup_M.o [5]
-__low_level_init              0x5e7    0x4  Code  Gb  low_level_init.o [4]
+__exit                        0x54d   0x14  Code  Gb  exit.o [6]
+__iar_program_start           0x5c5         Code  Gb  cstartup_M.o [5]
+__low_level_init              0x5af    0x4  Code  Gb  low_level_init.o [4]
 __vector_table                  0x0  0x410  Data  Gb  vectors.o [2]
-_call_main                    0x5d5         Code  Gb  cmain.o [5]
-_exit                         0x5f1         Code  Gb  cexit.o [5]
-abort                         0x57d    0x6  Code  Gb  abort.o [4]
-commonStartup                 0x443   0x6c  Code  Lc  system_MK60DZ10.o [3]
-default_isr                   0x583    0x2  Code  Gb  vectors.o [2]
-exit                          0x5eb    0x4  Code  Gb  exit.o [4]
-ledGpioInit                   0x519   0x1e  Code  Lc  main.o [1]
-main                          0x537   0x12  Code  Gb  main.o [1]
-start                         0x4e1   0x10  Code  Gb  system_MK60DZ10.o [3]
-wdogDisable                   0x419   0x2a  Code  Lc  system_MK60DZ10.o [3]
-write_vtor                    0x4f1   0x1c  Code  Gb  misc.o [2]
+_call_main                    0x59d         Code  Gb  cmain.o [5]
+_exit                         0x5b9         Code  Gb  cexit.o [5]
+abort                         0x545    0x6  Code  Gb  abort.o [4]
+commonStartup                 0x419   0x6c  Code  Lc  system_MK60DZ10.o [3]
+default_isr                   0x54b    0x2  Code  Gb  vectors.o [2]
+exit                          0x5b3    0x4  Code  Gb  exit.o [4]
+ledGpioInit                   0x4e1   0x1e  Code  Lc  main.o [1]
+main                          0x4ff   0x12  Code  Gb  main.o [1]
+start                         0x4ad    0xc  Code  Gb  system_MK60DZ10.o [3]
+write_vtor                    0x4b9   0x1c  Code  Gb  misc.o [2]
 
 
-[1] = E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\App\src
-[2] = E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src
-[3] = E:\Code\FREESCALE\NewProject\Prj\IAR\Debug\Obj\Chip\src\IAR
+[1] = E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\App\src
+[2] = E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\Chip\src
+[3] = E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\Chip\src\IAR
 [4] = dl7M_tlf.a
 [5] = rt7M_tl.a
 [6] = shb_l.a
 
-    472 bytes of readonly  code memory
+    416 bytes of readonly  code memory
   1'108 bytes of readonly  data memory
 
 Errors: none

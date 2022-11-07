@@ -672,7 +672,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>16</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -2177,9 +2177,6 @@
             <name>inc</name>
             <group>
                 <name>IAR</name>
-                <file>
-                    <name>$PROJ_DIR$\..\..\Chip\inc\IAR\iar.h</name>
-                </file>
                 <file>
                     <name>$PROJ_DIR$\..\..\Chip\inc\IAR\system_MK60DZ10.h</name>
                 </file>
