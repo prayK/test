@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.30.1.335/W64 for ARM                  06/Nov/2022  18:25:00
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  10/Nov/2022  15:02:28
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =
@@ -18,7 +18,7 @@
 #        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Exe\NewProject.out --map
 #        E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\List\NewProject.map
 #        --config
-#        E:\Code\MCU\KinetisNewProject\Prj\IAR\ConfigFiles\vcan_ROM_K60N512.icf
+#        E:\Code\MCU\KinetisNewProject\Prj\IAR\ConfigFiles\vcan_RAM_K60N512.icf
 #        --semihosting --entry __iar_program_start --vfe --text_out locale
 #        --cpu=Cortex-M4 --fpu=None)
 #
@@ -47,19 +47,19 @@ be primarily optimized for speed.
 *** PLACEMENT SUMMARY
 ***
 
-"A0":  place at address 0x0 { ro section .intvec };
-"A1":  place at address 0x410 { ro section .noinit };
+"A0":  place at address 0x1fff'0000 { ro section .intvec };
+"A1":  place at address 0x1fff'0410 { ro section .noinit };
 define block CodeRelocate { section .textrw_init };
-"P1":  place in [from 0x0 to 0x8'0000] { ro, block CodeRelocate };
+"P1":  place in [from 0x1fff'0000 to 0x2001'0000] { ro, block CodeRelocate };
 define block CodeRelocateRam { section .textrw };
 define block CSTACK with size = 4K, alignment = 8 { };
 define block HEAP with size = 2K, alignment = 8 { };
-"P2":  place in [from 0x1fff'0410 to 0x2001'0000] {
+"P2":  place in [from 0x1fff'0000 to 0x2001'0000] {
           rw, block CodeRelocateRam, block CSTACK, block HEAP };
 
 No sections matched the following patterns:
 
-  rw                    in "P2"
+  rw                    in "P1-P2"
   section .textrw       in block CodeRelocateRam
   section .textrw_init  in block CodeRelocate
 
@@ -67,42 +67,39 @@ No sections matched the following patterns:
   Section          Kind         Address   Size  Object
   -------          ----         -------   ----  ------
 "A0":                                    0x410
-  .intvec          const            0x0  0x410  vectors.o [2]
-                                - 0x410  0x410
+  .intvec          const    0x1fff'0000  0x410  vectors.o [2]
+                          - 0x1fff'0410  0x410
 
 "A1":                                      0x8
-  .noinit          ro code        0x410    0x8  startup_MK60DZ10.o [3]
-                                - 0x418    0x8
+  .noinit          ro code  0x1fff'0410    0x8  startup_MK60DZ10.o [3]
+                          - 0x1fff'0418    0x8
 
-"P1", part 1 of 2:                       0x1dc
-  .text            ro code        0x418   0xa0  system_MK60DZ10.o [3]
-  .text            ro code        0x4b8   0x28  misc.o [2]
-  .text            ro code        0x4e0   0x40  main.o [1]
-  .text            ro code        0x520   0x24  ABIassert.o [6]
-  .text            ro code        0x544    0x6  abort.o [4]
-  .text            ro code        0x54a    0x2  vectors.o [2]
-  .text            ro code        0x54c   0x14  exit.o [6]
-  .rodata          const          0x560   0x30  misc.o [2]
-  .text            ro code        0x590   0x1e  cmain.o [5]
-  .text            ro code        0x5ae    0x4  low_level_init.o [4]
-  .text            ro code        0x5b2    0x4  exit.o [4]
-  .text            ro code        0x5b8    0xa  cexit.o [5]
-  .text            ro code        0x5c4   0x1c  cstartup_M.o [5]
-  .rodata          const          0x5e0   0x14  misc.o [2]
-                                - 0x5f4  0x1dc
+"P1-P2", part 1 of 2:                    0x1dc
+  .text            ro code  0x1fff'0418   0xa0  system_MK60DZ10.o [3]
+  .text            ro code  0x1fff'04b8   0x28  misc.o [2]
+  .text            ro code  0x1fff'04e0   0x40  main.o [1]
+  .text            ro code  0x1fff'0520   0x24  ABIassert.o [6]
+  .text            ro code  0x1fff'0544    0x6  abort.o [4]
+  .text            ro code  0x1fff'054a    0x2  vectors.o [2]
+  .text            ro code  0x1fff'054c   0x14  exit.o [6]
+  .rodata          const    0x1fff'0560   0x30  misc.o [2]
+  .text            ro code  0x1fff'0590   0x1e  cmain.o [5]
+  .text            ro code  0x1fff'05ae    0x4  low_level_init.o [4]
+  .text            ro code  0x1fff'05b2    0x4  exit.o [4]
+  .text            ro code  0x1fff'05b8    0xa  cexit.o [5]
+  .text            ro code  0x1fff'05c4   0x1c  cstartup_M.o [5]
+  .rodata          const    0x1fff'05e0   0x14  misc.o [2]
+                          - 0x1fff'05f4  0x1dc
 
-"P1", part 2 of 2:                         0x0
-  CodeRelocate                    0x5f4    0x0  <Block>
-
-"P2":                                      0x0
-  CodeRelocateRam           0x1fff'0410    0x0  <Block>
+"P1-P2", part 2 of 2:                      0x0
+  CodeRelocate              0x1fff'05f4    0x0  <Block>
+  CodeRelocateRam           0x1fff'05f4    0x0  <Block>
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-        0x5f4     0x8'0000  0x7'fa0d
-  0x1fff'0410  0x2001'0000  0x1'fbf1
+  0x1fff'05f4  0x2001'0000  0x1'fa0d
 
 
 
@@ -169,35 +166,35 @@ Entry                       Address   Size  Type      Object
 .data$$Base                     0x0          --   Gb  - Linker created -
 .data_init$$Base                0x0          --   Gb  - Linker created -
 .data_init$$Limit               0x0          --   Gb  - Linker created -
-?main                         0x591         Code  Gb  cmain.o [5]
-CodeRelocate$$Base            0x5f4          --   Gb  - Linker created -
-CodeRelocate$$Limit           0x5f4          --   Gb  - Linker created -
-CodeRelocateRam$$Base   0x1fff'0410          --   Gb  - Linker created -
-CodeRelocateRam$$Limit  0x1fff'0410          --   Gb  - Linker created -
+?main                   0x1fff'0591         Code  Gb  cmain.o [5]
+CodeRelocate$$Base      0x1fff'05f4          --   Gb  - Linker created -
+CodeRelocate$$Limit     0x1fff'05f4          --   Gb  - Linker created -
+CodeRelocateRam$$Base   0x1fff'05f4          --   Gb  - Linker created -
+CodeRelocateRam$$Limit  0x1fff'05f4          --   Gb  - Linker created -
 Region$$Table$$Base             0x0          --   Gb  - Linker created -
 Region$$Table$$Limit            0x0          --   Gb  - Linker created -
-Reset_Handler                 0x411         Code  Gb  startup_MK60DZ10.o [3]
+Reset_Handler           0x1fff'0411         Code  Gb  startup_MK60DZ10.o [3]
 __BOOT_STACK_ADDRESS {Abs}
                         0x2000'fff8         Data  Gb  <internal module>
 __VECTOR_RAM {Abs}      0x1fff'0000         Data  Gb  <internal module>
-__VECTOR_TABLE {Abs}            0x0         Data  Gb  <internal module>
-__aeabi_assert                0x521   0x24  Code  Gb  ABIassert.o [6]
-__cmain                       0x591         Code  Gb  cmain.o [5]
-__code_start__ {Abs}          0x410         Data  Gb  <internal module>
-__exit                        0x54d   0x14  Code  Gb  exit.o [6]
-__iar_program_start           0x5c5         Code  Gb  cstartup_M.o [5]
-__low_level_init              0x5af    0x4  Code  Gb  low_level_init.o [4]
-__vector_table                  0x0  0x410  Data  Gb  vectors.o [2]
-_call_main                    0x59d         Code  Gb  cmain.o [5]
-_exit                         0x5b9         Code  Gb  cexit.o [5]
-abort                         0x545    0x6  Code  Gb  abort.o [4]
-commonStartup                 0x419   0x6c  Code  Lc  system_MK60DZ10.o [3]
-default_isr                   0x54b    0x2  Code  Gb  vectors.o [2]
-exit                          0x5b3    0x4  Code  Gb  exit.o [4]
-ledGpioInit                   0x4e1   0x1e  Code  Lc  main.o [1]
-main                          0x4ff   0x12  Code  Gb  main.o [1]
-start                         0x4ad    0xc  Code  Gb  system_MK60DZ10.o [3]
-write_vtor                    0x4b9   0x1c  Code  Gb  misc.o [2]
+__VECTOR_TABLE {Abs}    0x1fff'0000         Data  Gb  <internal module>
+__aeabi_assert          0x1fff'0521   0x24  Code  Gb  ABIassert.o [6]
+__cmain                 0x1fff'0591         Code  Gb  cmain.o [5]
+__code_start__ {Abs}    0x1fff'0410         Data  Gb  <internal module>
+__exit                  0x1fff'054d   0x14  Code  Gb  exit.o [6]
+__iar_program_start     0x1fff'05c5         Code  Gb  cstartup_M.o [5]
+__low_level_init        0x1fff'05af    0x4  Code  Gb  low_level_init.o [4]
+__vector_table          0x1fff'0000  0x410  Data  Gb  vectors.o [2]
+_call_main              0x1fff'059d         Code  Gb  cmain.o [5]
+_exit                   0x1fff'05b9         Code  Gb  cexit.o [5]
+abort                   0x1fff'0545    0x6  Code  Gb  abort.o [4]
+commonStartup           0x1fff'0419   0x6c  Code  Lc  system_MK60DZ10.o [3]
+default_isr             0x1fff'054b    0x2  Code  Gb  vectors.o [2]
+exit                    0x1fff'05b3    0x4  Code  Gb  exit.o [4]
+ledGpioInit             0x1fff'04e1   0x28  Code  Lc  main.o [1]
+main                    0x1fff'0519    0x8  Code  Gb  main.o [1]
+start                   0x1fff'04ad    0xc  Code  Gb  system_MK60DZ10.o [3]
+write_vtor              0x1fff'04b9   0x1c  Code  Gb  misc.o [2]
 
 
 [1] = E:\Code\MCU\KinetisNewProject\Prj\IAR\Debug\Obj\App\src

@@ -765,7 +765,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\ConfigFiles\vcan_ROM_K60N512.icf</state>
+                    <state>$PROJ_DIR$\ConfigFiles\vcan_RAM_K60N512.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
